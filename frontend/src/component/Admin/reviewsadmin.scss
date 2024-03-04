@@ -1,0 +1,72 @@
+.adminReviewContainer{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 100%;
+    height: 100vh;
+}
+
+.reviewContent{
+    display: flex;
+    flex-direction: column;
+    gap : 20px;    
+}
+
+.searchBar{
+    margin-top: 20px;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    >div{
+        display: flex;
+        align-items: center;
+        position: relative;
+        >svg{
+            position: absolute;
+            color: orangered;
+            left: 5px;
+        }
+        >input{
+            width: 300px;
+        }
+    }
+    >button{
+        width: 200px;
+        height: 40px;
+        background-color: tomato;
+        color: white;
+        border: none;
+        font-size: 20px;
+        &:hover{
+            background-color: rgb(169, 45, 0);
+        }
+    }
+}
+
+.tableReviews{
+    overflow-x:auto;
+    height: 100vh;
+    overflow-y: auto;
+}
+.trash{
+    cursor: pointer;
+    color: orangered;
+    &:hover{
+        color: rgb(80, 22, 0);
+    }
+}
+
+.notAllowed{
+    cursor: not-allowed;;
+}
+
+@media screen and (max-width:700px) {
+    .sidebar{
+        width: 100vw;
+    }
+    .adminReviewContainer{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+}

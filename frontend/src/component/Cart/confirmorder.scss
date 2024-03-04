@@ -1,0 +1,109 @@
+.maindiv{
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    padding: 4vh;
+    .first{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .shipingDetails{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-self: center;
+            >p{
+                >span{
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+        }
+        .cartItems{
+            max-height:60vh;
+            overflow-y: auto;
+            .card{
+                width:100%;
+                display:grid;
+                grid-template-columns: 4fr 2fr;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.595);
+                margin-bottom: 20px;
+                align-items: center;
+                >.card_1{
+                    display: flex;
+                    gap: 20px;
+                    >.card_2{
+                        height: 120px;
+                    }
+                    >.card_3{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        justify-content: center;
+                        >.price{
+                            font-size: 30px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .second{
+        max-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3vw;
+        gap: 20px;
+        align-items: center;
+        >div{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            >p{
+                &:nth-child(2){
+                    color: orangered;
+                    font-weight: 500;
+                }
+            }
+        }
+        >button{
+            height: 40px;
+            width: 300px;
+            background-color: #ff2700;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(253, 253, 253);
+                color: orangered;
+                border: 2px solid orangered;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:820px) {
+    .maindiv{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:475px) {
+    .maindiv{
+        >.first{
+            padding: 0 !important;
+            >.shipingDetails{
+                >p{
+                    >span{
+                        font-size: 15px !important;
+                    }
+                }
+            }
+        }
+    }
+    .price{
+        font-size: 20px !important;
+    }
+}

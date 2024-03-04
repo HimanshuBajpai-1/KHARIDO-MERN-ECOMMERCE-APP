@@ -1,0 +1,45 @@
+.contact{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    >svg{
+        font-size: 20vw;
+        color: tomato;
+    }
+}
+.textquery{
+    font-size: 5vw;
+}
+.myMAil{
+    font-size: 4vw;
+}
+
+.icons{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    >a{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .contact{
+        height: 90vh;
+        justify-content: center;
+        gap: 20px;
+        >svg{
+            font-size: 20vw;
+            color: tomato;
+        }
+    }
+    .textquery{
+        font-size: 5vw;
+    }
+    .myMAil{
+        font-size: 4vw;
+    }
+}

@@ -1,0 +1,194 @@
+.home1{
+    height: 100vh;
+    width: 100%;
+    background-color: tomato;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+    >h1{
+        font: 900 4rem italic;
+    }
+    >p{
+        font: 200 2rem 'Roboto';
+        text-align: center;
+    }
+    >a{
+        >button{
+            cursor: pointer;
+            height: 50px;
+            width: 150px;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+            text-align: center;
+            justify-content: center;
+            border-radius: 10px;
+            border: none;
+            &:hover{
+                background-color: #ffa500;
+                color: white;        
+                box-shadow: 0 0 20px #444341;
+            }
+        }
+    }
+    &::after{
+        content: "";
+        height: 100.3vh;
+        width: 100%;
+        position: absolute;
+        background-color: white;
+        clip-path: polygon(100% 69%, 0% 100%, 100% 100%);
+    }
+}
+
+.home2{
+    margin-top: 10vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:4vmax;
+    >h1{
+        font-size: 3rem;
+        color: #444341;
+        text-decoration: underline;
+    }
+    >.homeContainer{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;        
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 4vw;
+        .productCard{
+            width : 14vw;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: rgb(48,48,48);
+            margin: 2vh;
+            padding-bottom: 1vh;
+            transition: all 0.3s;
+            >img{
+                width: 14vw;
+            }
+            >p{
+                margin: 5px 0;
+                text-align: center;
+            }
+            >div{
+                display: flex;
+                flex-direction: column;
+                >div{
+                    span{
+                        font-size: 2vw !important;
+                    }       
+                }
+                >.rrev{
+                    font-size: 15px !important;
+                }
+                align-items: center;
+                >span{
+                    font-size: 10px;
+                }
+            }
+            >span{
+                margin-top: 8px;
+                color: tomato;
+                text-align: center;
+                font-weight: 700;
+            }
+            &:hover{
+                box-shadow: 0 10px 10px rgba(10,10,10,0.5);
+                transform: translateY(-5vh);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px){
+    .home1{
+        height: 80vh;
+        justify-content: flex-start;
+        gap: 5vh;
+        >h1{
+            margin-top: 20vh;
+            font: 900 2rem italic;
+            font-family: cursive;
+        }
+        >p{
+            font: 200 1.1rem 'Roboto';
+            color: white;
+            font-weight: bold;
+        }
+        >a{
+            >button{
+                height: 40px;
+                width: 120px;
+                font-size: 1rem;
+                box-shadow: 0 0 20px #444341;
+            }
+        }
+        &::after{
+            height: 80.2vh;
+        }
+    }
+    
+    .home2{
+        >h1{
+            font: 900 2rem italic;
+            font-family: cursive;
+        }
+        >.homeContainer{
+            width: 100%;
+            gap: 0vw;
+            .productCard{
+                width : 30vw;
+                >img{
+                    width: 30vw;
+                }
+                >div{
+                    display: flex;
+                    flex-direction: column;
+                    >div{
+                        span{
+                            font-size: 1rem !important;
+                        }       
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:410px){
+    .home1{
+        height: 90vh;
+        justify-content: flex-start;
+        gap: 5vh;
+        >h1{
+            margin-top: 20vh;
+            font: 900 1.8rem italic;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        &::after{
+            height: 90.2vh;
+        }
+    }    
+}
+        
+@media screen and (max-width:335px){
+    .home1{
+        >h1{
+            font: 900 1.3rem italic;
+        }
+        >p{
+            font: 200 1rem 'Roboto';
+        }
+    }   
+    .home2{
+        >h1{
+            font: 900 1.3rem italic;
+        }
+    } 
+}

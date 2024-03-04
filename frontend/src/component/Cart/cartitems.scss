@@ -1,0 +1,329 @@
+.noItem{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    >svg{
+        font-size: 10rem;
+        color: tomato;
+    }
+    >.noItem_1{
+        font-size: 1.3rem;
+        font-weight: 500;        
+    }
+    >a{
+        height: 40px;
+        width: 250px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            background-color: orangered;
+        }
+    }
+}
+
+.cartContainer{
+    min-height: 100vh;
+    width: 100%;
+    >.heading{
+        display: grid;
+        margin: 20px;
+        grid-template-columns: 4fr 1fr 1fr;
+        padding-left: 10px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        background-color: tomato;
+        >.divHead{
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+    >.cartItems{
+        max-height: 80vh;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        overflow-x: auto;
+        padding-left: 10px;
+        gap: 20px;        
+        >.itemcard{
+            display: grid;
+            grid-template-columns: 4fr 1fr 1fr;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.499),-1px -1px 5px rgba(0, 0, 0, 0.499);
+            >.productInfo{
+                display: flex;
+                gap: 10vw;
+                >a{
+                    >img{
+                        height: 125px;
+                    }
+                }
+                >.details_P{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2px;
+                    >div{
+                        &:first-child{
+                            font-size: 1.3rem;
+                            font-weight: bold;
+                        }
+                        &:nth-child(2){
+                            font-size: 1.1rem;
+                            font-weight: bold;
+                        }
+                        &:last-child{
+                            color: red;
+                            &:hover{
+                                cursor: pointer;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+            >.productQuantity{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                button{
+                    height: 40px;
+                    width: 40px;                    
+                    font-weight: bold;
+                    font-size: 1.2rem;                    
+                    border-radius: 10px; 
+                    border: none;
+                    background-color: rgb(121, 114, 114);
+                    &:hover{
+                        background-color: orangered;
+                        color: white;
+                    }
+                }
+                input{
+                    height: 40px;
+                    width: 40px; 
+                    font-size: 15px;
+                    font-weight: 500;
+                    padding: 10px;
+                }
+            }
+            >.subtotal{
+                display: flex;
+                align-items: center;
+                font-size: 1.3rem;
+                font-weight: 600;
+                font-family: cursive;
+                padding-left: 10px;
+                color: orangered;
+            }
+        }
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    >.last{
+        margin: 40px;
+        margin-right: 8vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        >.totalPrice{
+            border-top: 4px solid orangered;
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            font-size: 1.2rem;
+            >.p1{
+                color: orangered;
+                font-weight: bold;
+                font-size: 1.5rem;
+                font-family: cursive;
+            }
+        }
+        >.checkout{
+            height: 40px;
+            width: 200px;
+            background-color: orangered;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width:700px){
+    .last{
+        margin-right: 6vw !important;
+    }
+}
+
+@media screen and (max-width:550px){
+    .divHead{
+        font-size: 1rem;
+    }
+    .cartContainer{
+        >.heading{
+            grid-template-columns: 3fr 1fr 1fr;
+        }
+        >.cartItems{       
+            >.itemcard{
+                grid-template-columns: 3fr 1fr 1fr;
+                >.productInfo{
+                    gap: 2vw;
+                }
+                >.productQuantity{
+                    button{
+                        height: 30px;
+                        width: 30px;                        
+                        border-radius: 5px; 
+                    }
+                    input{
+                        height: 30px;
+                        width: 30px; 
+                        font-size: 20px;
+                        padding: 0px;
+                    }
+                }
+            }
+        }
+        >.last{
+            >.totalPrice{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:440px){
+    .cartContainer{
+        >.heading{
+            margin: 20px 0;
+            grid-template-columns: 3fr 1fr 1fr;
+            >.divHead{
+                font-size: 1rem;
+            }
+        }
+        >.cartItems{
+            margin: 20px 0;
+            padding-left: 0;    
+            >.itemcard{
+                grid-template-columns: 3fr 1fr 1fr;
+                >.productInfo{
+                    gap: 1vw;
+                }
+                >.productQuantity{
+                    gap: 5px;
+                    button{
+                        height: 30px;
+                        width: 30px;       
+                        font-size: 1rem;                    
+                        border-radius: 2px; 
+                    }
+                    input{
+                        height: 30px;
+                        width: 30px; 
+                        font-size: 15px;
+                        padding: 0;
+                    }
+                }
+                >.subtotal{
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:360px) {
+    .cartContainer{
+        >.heading{
+            grid-template-columns: 2fr 1fr 1fr;
+            >.divHead{
+                font-size: 15px !important;
+            }
+        }
+        >.cartItems{
+            margin: 20px 0;
+            >.itemcard{
+                grid-template-columns: 2fr 1fr 1fr;
+                >.productInfo{
+                    gap: 1px;
+                    >a{
+                        >img{
+                            height: 100px;
+                        }
+                    }
+                    >.details_P{
+                        >div{
+                            &:first-child{
+                                font-size: 15px;
+                            }
+                            &:nth-child(2){
+                                font-size: 12px;
+                            }
+                            &:last-child{
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+                >.productQuantity{
+                    gap: 1px;
+                    button{
+                        height: 20px;
+                        width: 20px;      
+                        font-size: 10px;                    
+                        border-radius: none; 
+                    }
+                    input{
+                        height: 20px;
+                        width: 20px; 
+                        font-size: 10px;
+                        padding: 0;
+                    }
+                }
+                >.subtotal{
+                    font-size: 15px;
+                }
+            }
+        }
+        >.last{
+            >.totalPrice{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:275px) {
+    .noItem{
+        >a{
+            height: 40px;
+            width: 150px !important;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                background-color: orangered;
+            }
+        }
+    }
+}

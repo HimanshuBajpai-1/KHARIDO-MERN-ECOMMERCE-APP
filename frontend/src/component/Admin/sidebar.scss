@@ -1,0 +1,82 @@
+.sidebar{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 12vh;
+    gap: 10vh;
+    align-items: center;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: tomato;
+    &:hover{
+        color: rgb(159, 46, 4);
+    }
+}
+
+.b1{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    color: tomato;
+    cursor: pointer;
+    &:hover{
+        color: rgb(159, 46, 4);
+    }
+}
+
+.b1_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+}
+
+.visible{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+.productsNav{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-self: flex-end;
+}
+
+.b2{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    color: rgb(253, 87, 58);
+    cursor: pointer;
+    &:hover{
+        color: rgb(163, 47, 4);
+    }                                                                                                                                                   
+}
+
+@media screen and (max-width:700px){
+    .sidebar{
+        height: auto;
+        padding: 4vh 0;
+        gap: 4vh;        
+    }
+    .b1_1{
+        gap: 0px;
+        width: 65%;
+    }
+    .productsNav{
+        padding-top: 2vh;
+        gap: 1vh;
+    }
+}

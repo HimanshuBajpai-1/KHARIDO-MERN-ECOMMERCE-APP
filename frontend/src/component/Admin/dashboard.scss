@@ -1,0 +1,97 @@
+.dashboardContainer{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    overflow-y: auto;
+}
+.content{
+    padding: 20px;
+}
+
+.totalsale{
+    background-color: #34b6e8;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    >span{
+        font-size: 1.5rem;
+        margin-left: 5px;
+    }
+}
+
+.roundContainer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.round{
+    height: 20vw;
+    width: 20vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    >div{
+        &:first-child{
+            font-size: 30px;
+            color: white;
+        }
+        &:last-child{
+            font-size: 20px;
+            color: white;
+        }
+    }
+}
+.r1{
+    background-color: rgb(134, 50, 134);
+}
+.r2{
+    background-color: tomato;
+}
+.r3{
+    background-color: rgb(141, 134, 55);
+}
+.lineChart{
+    width: 80%;
+    margin: 40px auto;
+}
+.doughnutChart{
+    width: 60%;
+    margin: 40px auto;
+}
+
+@media screen and (max-width:700px) {
+    .dashboardContainer{
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+    .content{
+        padding: 0;
+    }
+    .totalsale{
+        margin-top: 50px;
+        font-size: 1.3rem;
+    }
+    .roundContainer{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .round{
+        height: 70vw;
+        width: 70vw;
+    }
+    .lineChart{
+        width: 100%;
+        margin: 40px auto;
+    }
+    .doughnutChart{
+        width: 100%;
+        margin: 40px auto;
+    }
+}

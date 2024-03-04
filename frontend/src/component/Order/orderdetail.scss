@@ -1,0 +1,89 @@
+.green {
+    color: rgb(48 217 108);
+    font-weight: bold;
+}
+.red {
+    color: red;
+    font-weight: bold;
+}
+.orderdetail{
+    padding: 4vw;
+}
+.b_1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+.b_1_1{
+    font-size: 30px;
+    color: orangered;
+    font-weight: bold;
+}
+p{
+    margin-bottom: 20px;
+}
+.cartItems{
+    max-height:60vh;
+    overflow-y: auto;
+    .card{
+        width:100%;
+        display:grid;
+        grid-template-columns: 4fr 2fr;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.595);
+        margin-bottom: 20px;
+        align-items: center;
+        >.card_1{
+            display: flex;
+            gap: 20px;
+            >.card_2{
+                height: 120px;
+            }
+            >.card_3{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                justify-content: center;
+                >.price{
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.priceDetail{
+    margin-top: 20px;
+    div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        >p{
+            &:nth-child(2){
+                color: orangered;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.last{
+    border-top: 2px solid orangered;
+    padding-top: 10px;
+}
+
+
+@media screen and (max-width:450px){
+    .b_1_1{
+        font-size: 20px;
+        color: orangered;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width:300px){
+    .b_1_1{
+        font-size: 15px;
+        color: orangered;
+        font-weight: bold;
+    }
+}

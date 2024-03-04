@@ -1,0 +1,42 @@
+.green {
+    color: rgb(48 217 108);
+    font-weight: bold;
+}
+.red {
+    color: red;
+    font-weight: bold;
+}
+.myOrders{
+    height: 100vh;
+}
+.table{
+    overflow-x:auto
+}
+.warning{
+    padding-top: 20vh;
+    text-align: center;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th{
+    background-color: tomato;
+    color: white;
+    font-size: 20px;
+}
+th,td{
+    height:60px;
+    text-align: center;
+    border-bottom: 1px solid orangered;
+    padding: 0 30px;
+}
+.link{
+    cursor: pointer;    
+}
+a{
+    color: black;
+    &:hover{
+        color: orangered;
+    }
+}

@@ -1,0 +1,112 @@
+.updateProductContainer{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 100%;
+}
+.updateProduct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    max-width: 100vw;
+}
+.formdiv{    
+    padding: 20px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 5px grey,-1px -1px 5px grey;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inputField{
+    display: flex;    
+    position: relative;
+    align-items: center;
+    margin-bottom: 10px;
+    >svg{
+        position: absolute;
+        font-size: 20px;
+        color: orangered;
+    }
+}
+input,select{
+    padding-left: 25px;
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    color: orangered;
+    border: none;
+    border-bottom: 1px solid orangered;
+    outline-color: orangered;
+    &::file-selector-button{
+        background-color: white;
+        color: orangered;
+        width: 100%;
+        height: 40px;
+        border: 1px solid orangered;
+    }
+    &::placeholder{
+        color: orangered;
+    }
+}
+input[type='file']{
+    border: none;
+}
+input[type='submit']{
+    margin: auto;
+    width: 60%;
+    background: tomato;
+    color: white;
+    &:hover{
+        background-color: orangered;
+    }
+}
+
+.imgPreviewContainer{
+    width: 100%;
+}
+.imgPreview{
+    max-width: 50vw;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    >img{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.notallowed{
+    display: none;
+}
+
+@media screen and (max-width:900px){
+    .formdiv{
+        width: 80%;
+    }
+}
+@media screen and (max-width:700px){
+    .updateProductContainer{
+        grid-template-columns: 1fr;
+    }
+    .imgPreview{
+        max-width: 60vw;
+    }
+}
+@media screen and (max-width:500px){
+    .formdiv{
+        width: 100%;
+    }
+    .updateProduct{
+        padding: 0;
+    }
+    .imgPreview{
+        max-width: 85   vw;
+    }
+}
