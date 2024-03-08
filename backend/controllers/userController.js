@@ -74,7 +74,7 @@ exports.forgotPassword = catchAsyncError(async (req,res,next)=>{
     try{
         await sendEmail({
             email : user.email,
-            subject : 'E-commerce Password Reset',
+            subject : 'KHARIDO Password Reset',
             message
         });
         res.status(200).json({
